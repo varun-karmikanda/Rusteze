@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  db:
+    container_name: rusteze_db
+    image: postgres:15-alpine
+    restart: always
+    env_file:
+      - .env
+    environment: 
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - rusteze_data:/var/lib/postgresql/data
+      
+volumes:
+  rusteze_data:
