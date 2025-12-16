@@ -5,3 +5,12 @@ edition = "2024"
 
 [dependencies]
 serde ={ version = "1.0.228", features = ["derive"]}
+
+# 1. Diesel with extensions for Postgres, Dates (Chrono), and IDs (UUID)
+diesel = { version = "2.1.0", features = ["postgres", "r2d2", "chrono", "uuid"] }
+
+# 3. Time handling (Matches TIMESTAMP in SQL)
+chrono = { version = "0.4", features = ["serde"] }
+
+# 4. ID handling (Matches UUID in SQL)
+uuid = { version = "1.4", features = ["serde", "v4"] }
