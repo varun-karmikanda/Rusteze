@@ -1,0 +1,10 @@
+[package]
+name = "web-server"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+actix-web = "4.12.1"
+
+lib-core ={ path = "../../libs/lib-core"}
+lib-auth ={ path = "../../libs/lib-auth"}

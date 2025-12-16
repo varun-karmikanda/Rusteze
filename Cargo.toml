@@ -1,0 +1,7 @@
+[workspace]  
+members = [
+  "crates/libs/lib-core",
+  "crates/libs/lib-auth",
+  "crates/services/web-server",
+]
+resolver = "2"
